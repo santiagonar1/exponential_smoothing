@@ -3,3 +3,4 @@ CMakeDeps
 
 [requires]
 gtest/1.15.0
+ensmallen/2.21.0
