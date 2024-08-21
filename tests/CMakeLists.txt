@@ -7,7 +7,7 @@ macro(package_add_test TEST_NAME)
 
     # link the Google test infrastructure, mocking library, and a default main function to
     # the test executable.  Remove g_test_main if writing your own main function.
-    target_link_libraries(${TEST_NAME} GTest::gtest_main holt_winters)
+    target_link_libraries(${TEST_NAME} GTest::gtest_main exponential_smoothing)
 
     # gtest_discover_tests replaces gtest_add_tests,
     # see https://cmake.org/cmake/help/v3.10/module/GoogleTest.html for more options to pass to it
@@ -23,5 +23,5 @@ file(GLOB SOURCES
         *.cpp
 )
 
-package_add_test(holt_winters_tests
+package_add_test(exponential_smoothing_tests
         ${SOURCES})
