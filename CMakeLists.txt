@@ -7,10 +7,10 @@ file(GLOB SOURCES
         src/*.cpp
 )
 
-add_library(holt_winters
+add_library(${PROJECT_NAME}
         ${SOURCES})
 
-target_include_directories(holt_winters
+target_include_directories(${PROJECT_NAME}
         PUBLIC "${holt_winters_SOURCE_DIR}/include")
 
 add_subdirectory(demos)
