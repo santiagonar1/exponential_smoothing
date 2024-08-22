@@ -4,6 +4,10 @@ project(exponential_smoothing VERSION 0.0.1)
 set(CMAKE_CXX_STANDARD 20)
 set(namespace "${PROJECT_NAME}")
 
+if (NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif ()
+
 option(BUILD_TESTING "Build tests" ON)
 
 enable_testing()
