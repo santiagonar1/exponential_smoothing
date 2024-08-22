@@ -24,8 +24,8 @@ make
 
 The previous steps are enough to play with the demos and check that dependencies of the library are satisfied. But If
 you
-want to use our library with an external project, you will need to install it. We provide an installation script
-`install.sh`, which should be run directly from the root directory of the library:
+want to use our library with an external project, you will need to install it. We provide
+an [installation script](install.sh), which should be run directly from the root directory of the library:
 
 ```shell
 bash install.sh
