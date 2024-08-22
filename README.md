@@ -54,7 +54,7 @@ target_link_libraries(exec.out PRIVATE exponential_smoothing::exponential_smooth
 When you configure your external application do not forget to include the path to where the library was installed:
 
 ```shell
-cmake -DCMAKE_PREFIX_PATH="/path/to/library/install"
+cmake -DCMAKE_PREFIX_PATH=/path/to/library/install
 ```
 
 At last, you should be able to include and use our headers in your project as, for example:
