@@ -13,10 +13,10 @@ namespace ts {
         void fit(const std::vector<double> &data);
 
         // Forecast a certain number of steps ahead
-        std::vector<double> forecast(int steps_ahead) const;
+        [[nodiscard]] std::vector<double> forecast(int steps_ahead) const;
 
         // Calculate Mean Squared Error (MSE) for given data
-        double calculateMSE(const std::vector<double> &data);
+        [[nodiscard]] double calculateMSE(const std::vector<double> &data);
 
     private:
         double _alpha;// Smoothing parameter for level
