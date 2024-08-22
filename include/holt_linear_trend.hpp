@@ -10,7 +10,7 @@ namespace ts {
         HoltLinearTrend(double alpha, double beta);
 
         // Fit the model
-        void fit(const std::vector<double> &data);
+        void fit(const std::vector<double> &data, bool optimize);
 
         // Forecast a certain number of steps ahead
         [[nodiscard]] std::vector<double> forecast(int steps_ahead) const;
@@ -27,6 +27,8 @@ namespace ts {
         // Helper methods to initialize level and trend
         void initialize(const std::vector<double> &data);
         void update(double observation);
+
+        void optimize_parameters(const std::vector<double> &data);
     };
 }// namespace ts
 
