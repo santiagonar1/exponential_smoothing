@@ -16,6 +16,10 @@ file(GLOB SOURCES
         src/*.cpp
 )
 
+file(GLOB MY_PUBLIC_HEADERS
+        include/*.hpp
+)
+
 add_library(${PROJECT_NAME}
         ${SOURCES})
 
