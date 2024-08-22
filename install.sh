@@ -21,8 +21,7 @@ if [ -d "${BUILD_DIR}" ]; then
   prompt_user
 fi
 
-CMAKE_FLAGS="-DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=conan_provider.cmake -DBUILD_TESTING=OFF"
-
+CMAKE_FLAGS="-DBUILD_TESTING=OFF"
 
 rm -rf ${BUILD_DIR}
 mkdir -p ${BUILD_DIR}

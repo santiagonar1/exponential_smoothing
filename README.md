@@ -15,6 +15,11 @@ cmake -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=conan_provider.cmake ..
 make
 ```
 
+> [!note]
+> Right now we only use `conan` to get the `GTest` suit. Thus, if you either have that already installed on the system
+> or you compiled the code with `-DBUILD_TESTING=OFF`, you can safely omit its installation and the use of
+> `-DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=conan_provider.cmake`.
+
 ## Install
 
 The previous steps are enough to play with the demos and check that dependencies of the library are satisfied. But If
