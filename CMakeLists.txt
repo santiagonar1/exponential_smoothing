@@ -3,6 +3,10 @@ project(exponential_smoothing)
 
 set(CMAKE_CXX_STANDARD 20)
 
+option(BUILD_TESTING "Build tests" ON)
+
+enable_testing()
+
 file(GLOB SOURCES
         src/*.cpp
 )
@@ -22,5 +26,10 @@ target_include_directories(${PROJECT_NAME}
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
 
+if (BUILD_TESTING)
+    add_subdirectory(tests)
+else ()
+    message(STATUS "Tests will not be compiled")
+endif ()
+
 add_subdirectory(demos)
-add_subdirectory(tests)
