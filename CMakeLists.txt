@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.28)
-project(exponential_smoothing)
+project(exponential_smoothing VERSION 0.0.1)
 
 set(CMAKE_CXX_STANDARD 20)
+set(namespace "${PROJECT_NAME}")
 
 option(BUILD_TESTING "Build tests" ON)
 
@@ -33,3 +34,7 @@ else ()
 endif ()
 
 add_subdirectory(demos)
+
+# where to find our CMake modules
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+include(Install)
