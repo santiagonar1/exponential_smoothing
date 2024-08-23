@@ -3,17 +3,18 @@
 #include <algorithm>
 #include <fstream>
 #include <limits>
-#include <ranges>
 #include <stdexcept>
 
 namespace ts {
     std::vector<double> generateDoubles(double start, double end, double step) {
-        auto range = std::views::iota(0) |
-                     std::views::transform([start, step](int i) { return start + i * step; }) |
-                     std::views::take_while([end](double value) { return value <= end; });
+        std::vector<double> values{};
+        double value = start;
 
-        std::vector<double> values;
-        std::ranges::copy(range, std::back_inserter(values));
+        while (value < end) {
+            values.push_back(value);
+            value += step;
+        }
+
         return values;
     }
 

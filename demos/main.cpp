@@ -1,6 +1,5 @@
 #include <fstream>
 #include <iostream>
-#include <ranges>
 
 #include <holt_linear_trend.hpp>
 
