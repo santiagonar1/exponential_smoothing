@@ -1,7 +1,6 @@
 #include "holt_linear_trend.hpp"
 
 #include <algorithm>
-#include <fstream>
 #include <limits>
 #include <stdexcept>
 
